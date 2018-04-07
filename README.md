@@ -147,4 +147,4 @@ You may want to assign this command to either `BufWritePre` event to run on save
 
 Following screencast shows these in action:
 
-![demo-screencast](https://media.giphy.com/media/3jhrv0tBisP8etpHT1/giphy.gif)
+![demo-screencast](https://media.giphy.com/media/8cBhMZtAy4v0YdMrQJ/giphy.gif)
