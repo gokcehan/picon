@@ -4,7 +4,7 @@
 #
 # https://github.com/gokcehan/lf
 #
-# Run code in python interactive console
+# Run your code in python interactive console from the command line
 #
 
 from __future__ import print_function

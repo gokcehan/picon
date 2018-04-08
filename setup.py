@@ -11,7 +11,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='picon',
     version='1.0.0',
-    description='Run code in python interactive console',
+    description='Run your code in python interactive console from the command line',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/gokcehan/picon',
