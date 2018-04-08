@@ -142,11 +142,13 @@ Or you can download it from github and put it somewhere in `$PATH`:
 ## Vim Integration
 
 Simply running `:%!picon -a` evaluates the buffer content and puts the output as comments below the code.
-In order to keep the cursor position fixed and join undo operations to a single step you can use a command similar to the following:
+In order to keep the cursor position fixed and join undo operations to a single step you can add a command similar to the following to the file `~/.vim/ftplugin/python.vim`:
 
-    command! Picon exe 'normal m`' | silent! undojoin | exe '%!picon -a' | exe 'normal ``'
+    if executable('picon')
+    	command! -buffer -range=% Picon exe 'normal m`' | silent! undojoin | exe '<line1>,<line2>' . '!picon -a' | exe 'normal ``'
+    endif
 
 You may want to assign this command to either `BufWritePre` event to run on save and/or `CursorHold` event to run on idle as follows (see also `:h updatetime`):
 
-    autocmd Filetype python autocmd BufWritePre <buffer> Picon
-    autocmd Filetype python autocmd CursorHold <buffer> Picon
+    autocmd BufWritePre <buffer> Picon
+    autocmd CursorHold  <buffer> Picon
