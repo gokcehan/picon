@@ -84,6 +84,7 @@ def run():
     if args.append:
         output = OutputFilter()
         stdout = sys.stdout
+        stderr = sys.stderr
         sys.stdout = output
         sys.stderr = output
 
@@ -107,6 +108,10 @@ def run():
 
         if args.append and not more:
             stdout.write(output.read())
+
+    if args.append:
+        sys.stdout = stdout
+        sys.stderr = stderr
 
 if __name__ == "__main__":
     run()
