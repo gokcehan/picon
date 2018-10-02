@@ -2,7 +2,7 @@
 #
 # picon.py
 #
-# https://github.com/gokcehan/lf
+# https://github.com/gokcehan/picon
 #
 # Run your code in python interactive console from the command line
 #
