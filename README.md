@@ -149,4 +149,4 @@ In order to keep the cursor position fixed and join undo operations to a single 
 You may want to assign this command to either `BufWritePre` event to run on save and/or `CursorHold` event to run on idle as follows (see also `:h updatetime`):
 
     autocmd Filetype python autocmd BufWritePre <buffer> Picon
-    autocmd Filetype python autocmd CursorHold <buffer> Picon
+    autocmd Filetype python autocmd CursorHold  <buffer> Picon
