@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='picon',
-    version='3',
+    version='4',
     description='Run your code in python interactive console from the command line',
     url='https://github.com/gokcehan/picon',
     author='Gokcehan Kara',

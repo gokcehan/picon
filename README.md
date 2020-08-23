@@ -6,6 +6,19 @@ This is useful to evaluate your code on the fly and show you the result right be
 
 ![demo-screencast](https://media.giphy.com/media/8cBhMZtAy4v0YdMrQJ/giphy.gif)
 
+## Installation
+
+You can install `picon` as a python package using `pip`:
+
+    pip install picon
+
+Or you can download it from github and put it somewhere in `$PATH`:
+
+    curl https://raw.githubusercontent.com/gokcehan/picon/master/picon/picon.py -o picon
+    chmod +x picon
+    mkdir -p ~/.local/bin
+    mv picon ~/.local/bin
+
 ## Usage
 
 `picon` is implemented as a thin wrapper around [code](https://docs.python.org/3/library/code.html) module to be used as a command line application.
@@ -17,7 +30,7 @@ Following example code is used for demonstration:
 
     x = 42
     x
-    print x
+    print(x)
 
     y
 
@@ -50,7 +63,7 @@ This can be used to prepare programming notes or documentation:
     >>> x = 42
     >>> x
     42
-    >>> print x
+    >>> print(x)
     42
     >>>
     >>> y
@@ -77,7 +90,7 @@ This mode is designed to be integrated to editors to create a live worksheet env
     x = 42
     x
     #|42
-    print x
+    print(x)
     #|42
 
     y
@@ -101,7 +114,7 @@ First, return values are automatically shown without a `print` statement:
     $ cat return.py
     x = 42
     x
-    print x
+    print(x)
     $ python return.py
     42
     $ picon return.py
@@ -112,32 +125,20 @@ Second, blocks are separated with blank newlines in addition to indentation:
 
     $ cat block.py
     if True:
-        print 'one'
+        print('one')
 
-        print 'two'
+        print('two')
     $ python block.py
     one
     two
     $ picon block.py
     one
       File "<console>", line 1
-        print 'two'
+        print('two')
         ^
     IndentationError: unexpected indent
 
 Having blank trailing spaces equal to the indentation works in interactive console but not in `picon`.
-
-## Installation
-
-You can install `picon` as a python package using `pip`:
-
-    pip install picon
-
-Or you can download it from github and put it somewhere in `$PATH`:
-
-    curl https://raw.githubusercontent.com/gokcehan/picon/master/picon/picon.py -o picon
-    chmod +x picon
-    sudo mv picon /usr/local/bin
 
 ## Vim Integration
 
